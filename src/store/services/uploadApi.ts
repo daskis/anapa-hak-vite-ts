@@ -3,7 +3,7 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 export const uploadApi = createApi({
     reducerPath: "uploadApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://192.168.1.165:8000"
+        baseUrl: "ayin1.k-lab.su"
     }),
     endpoints: (build) => ({
         sendFile: build.mutation({
