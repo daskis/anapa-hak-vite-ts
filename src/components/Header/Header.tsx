@@ -42,11 +42,7 @@ export const Header = () => {
                     footer={(
                         <>
                             <Button onClick={() => setIsModalLinkOpen(false)}>Отмена</Button>
-                            <Button onClick={() => {
-                                dispatch(addVideo(null))
-                                dispatch(addLink(link))
-                                setIsModalLinkOpen(false)
-                            }} type="primary">Отправить</Button>
+                            <Button onClick={() => dispatch(addLink(link))} type="primary">Отправить</Button>
                         </>
                     )}
                     cancelText="Отмена" title="Загрузка ссылки"
@@ -90,10 +86,7 @@ export const Header = () => {
                         <>
                             <Button onClick={() => setIsModalFileOpen(false)}>Отмена</Button>
                             <Button onClick={() => {
-                                if (file) {
-                                    handleFileUpload()
-                                    setIsModalFileOpen(false)
-                                }
+                                handleFileUpload()
                             }} type="primary">Отправить</Button>
                         </>
                     )}
