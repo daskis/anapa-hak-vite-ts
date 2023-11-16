@@ -1,29 +1,17 @@
-# Используем образ с Node.js для сборки проекта
-FROM node:latest AS builder
+# Используем образ Node.js для разработки
+FROM node:latest AS development
 
-# Установка рабочей директории внутри контейнера
+# Устанавливаем рабочую директорию внутри контейнера
 WORKDIR /app
 
-# Копируем package.json и package-lock.json в контейнер
+# Копируем package.json и package-lock.json для установки зависимостей
 COPY package.json package-lock.json ./
 
-# Устанавливаем зависимости проекта
+# Установка зависимостей проекта
 RUN npm install
 
-# Копируем остальные файлы проекта в контейнер
+# Копируем остальные файлы проекта
 COPY . .
 
-# Собираем проект (сборка приложения)
-RUN npm run build
-
-# Подготавливаем production-версию приложения
-FROM nginx:latest
-
-# Копируем собранные файлы приложения из билд-стейджа
-COPY --from=builder /app/dist /usr/share/nginx/html
-
-# Открываем порт 80 для обращения к веб-серверу
-EXPOSE 3000
-
-# Запускаем NGINX при запуске контейнера
-CMD ["nginx", "-g", "daemon off;"]
+# Запускаем проект в режиме разработки (ваша команда для запуска dev-сервера)
+CMD ["npm", "run", "dev"]

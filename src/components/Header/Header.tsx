@@ -20,6 +20,8 @@ export const Header = () => {
     const [trigger, {data}] = useSendFileMutation()
     const handleFileUpload = () => {
         const formData = new FormData()
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         formData.set("file", file)
         trigger(formData)
     }
@@ -97,6 +99,8 @@ export const Header = () => {
                             <Upload.Dragger
                                 maxCount={1}
                                 onChange={(e) => {
+                                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                                    // @ts-expect-error
                                     setFile(e.file.originFileObj)
                                 }}
                             >

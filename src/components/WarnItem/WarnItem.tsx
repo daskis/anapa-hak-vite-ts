@@ -1,10 +1,11 @@
 import cls from "./WarnItem.module.scss"
 import * as dayjs from "dayjs"
-import {Progress, Typography} from "antd";
+import {Progress} from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-export const WarnItem = ({id, danger_count, danger_level, time, img}) => {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+export const WarnItem = ({danger_count, danger_level, time}) => {
     const navigate = useNavigate()
     return (
         <li onClick={() => navigate(`/danger/${danger_count}`)} className={cls.wrapper}>

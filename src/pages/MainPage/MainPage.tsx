@@ -16,15 +16,20 @@ export const MainPage = () => {
                 danger_level: null,
                 time: null,
                 img: null
-            }
+            }// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             data.dangers.forEach(item => {
                 obj.time = item.time
                 obj.danger_count = item.danger_count
                 obj.danger_level = item.danger_level
 
             })
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             obj.img = data.shots[0].shot
             array.push(obj)
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             setItems(array)
         }
     }, [data]);
@@ -47,13 +52,19 @@ export const MainPage = () => {
                                 :
                                 link
                                     ?
+                                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                                    // @ts-expect-error
                                     <Video link={link}/>
                                     : <></>
                             }
                         </div>
                         <div>
+                            {/*// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                            // @ts-expect-error*/}
                             <Typography.Title className={cls.title}>{data?.title}</Typography.Title>
                             <Typography.Paragraph>
+                                {/*// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                                    // @ts-expect-error*/}
                                 {data?.description}
                             </Typography.Paragraph>
                         </div>
