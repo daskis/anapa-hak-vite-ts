@@ -13,7 +13,7 @@ export const uploadApi = createApi({
                 body: file
             }),
             transformResponse: (response) => {
-                console.log(response)
+                return response
             }
         }),
     })

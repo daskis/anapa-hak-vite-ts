@@ -2,6 +2,9 @@ import React, {useEffect, useRef} from 'react';
 import {Spin} from 'antd';
 
 export const Video = ({link = null}) => {
+    useEffect(() => {
+        console.log(link)
+    }, [link]);
     if (link) {
         console.log(link)
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -13,7 +16,7 @@ export const Video = ({link = null}) => {
         let socket = null;
 
         const connectWebSocket = () => {
-            socket = new WebSocket(`ws://ayin1.k-lab.su//link?rtsp_url=${link}`);
+            socket = new WebSocket(`ws://ayin1.k-lab.su/link?rtsp_url=${link}`);
 
             socket.binaryType = 'arraybuffer';
 

@@ -18,6 +18,7 @@ export const Header = () => {
     const dispatch = useAppDispatch()
     const {theme} = useTheme()
     const [trigger, {data}] = useSendFileMutation()
+
     const handleFileUpload = () => {
         const formData = new FormData()
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
