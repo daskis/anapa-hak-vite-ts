@@ -1,0 +1,36 @@
+@import "reset";
+@import "themes/dark";
+@import "themes/light";
+@import "variables/index";
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/montserrat-light.ttf") format("ttf"),
+  url("../assets/fonts/montserrat-light.woff") format("woff"),
+  url("../assets/fonts/montserrat-light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/montserrat-regular.ttf") format("ttf"),
+  url("../assets/fonts/montserrat-regular.woff") format("woff"),
+  url("../assets/fonts/montserrat-regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/montserrat-medium.ttf") format("ttf"),
+  url("../assets/fonts/montserrat-medium.ttf") format("woff"),
+  url("../assets/fonts/montserrat-medium.ttf") format("woff2");
+  font-weight: 500;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.wrapper {
+  padding: 20px;
+}

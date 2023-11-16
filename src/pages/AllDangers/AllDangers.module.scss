@@ -1,0 +1,22 @@
+.wrapper {
+  .info {
+    display: flex;
+    justify-content: space-between;
+    & h1 {
+      font-family: var(--fontFamily);
+      font-size: 50px;
+      margin: 0;
+      padding: 0;
+    }
+    & div {
+      font-family: var(--fontFamily);
+      font-size: var(--subheading-size);
+      font-weight: var(--subheading-weight);
+    }
+  }
+  .title {
+    font-family: var(--fontFamily);
+    font-size: var(--heading-size);
+    font-weight: var(--heading-weight);
+  }
+}
