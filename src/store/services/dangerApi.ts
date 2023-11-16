@@ -17,7 +17,7 @@ export const dangerApi = createApi({
         }),
         getDangerById: build.query({
             query: (id) => ({
-                url: `/danger/{id}?id_=${id}`,
+                url: `/danger/${id}`,
                 method: "GET"
             }),
             transformResponse: (response) => {
