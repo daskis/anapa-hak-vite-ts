@@ -13,7 +13,7 @@ export const Video = ({link = null}) => {
         let socket = null;
 
         const connectWebSocket = () => {
-            socket = new WebSocket(`ws://192.168.1.165:8000/link?rtsp_url=${link}`);
+            socket = new WebSocket(`ws://prod_xd-model-1:8000/link?rtsp_url=${link}`);
 
             socket.binaryType = 'arraybuffer';
 
